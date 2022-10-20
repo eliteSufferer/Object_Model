@@ -1,28 +1,31 @@
 package characters;
 
-import java.util.ArrayList;
+
 public abstract class AbstractCharacter {
     private String name;
+    private String id;
 
-    private ArrayList<String> actions = new ArrayList<>();
 
-    public AbstractCharacter(String name){
+    public AbstractCharacter(String name, String id){
+
         this.name = name;
+        this.id = id;
     }
 
     public String getName(){
         return this.name;
     }
 
-    protected void addInfo(String name){
-        this.actions.add(name);
+    @Override
+    public int hashCode(){
+        return(id != null ? id.hashCode() : 0);
     }
 
     @Override
     public String toString(){
         return "Character Data: {"
-                +"fullName = '" + this.getName() + '\''
-                + ", Actions = " + this.actions
+                +"Имя персонажа = '" + this.getName() + '\''
+                + " Айдишник = " + Integer.toString(this.hashCode()-48)
                 + '}';
 
     }

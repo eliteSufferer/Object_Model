@@ -4,15 +4,16 @@ import characters.Karlson;
 import characters.Malysh;
 import com.sun.source.doctree.StartElementTree;
 import objects.TypeOfObject;
+import position.Box;
+import position.CornerOfSheet;
 import quallity.QualityOfAction;
 
 public class Main {
     public static void main(String[] args) {
-
-        Malysh char1 = new Malysh("Малыш");
-        Govnilla char2 = new Govnilla("Говнилла");
-        Crister char3 = new Crister("Кристер");
-        Karlson char4 = new Karlson("Карлсон");
+        Malysh char1 = new Malysh("Малыш", "1");
+        Govnilla char2 = new Govnilla("Гунилла", "2");
+        Crister char3 = new Crister("Кристер", "3");
+        Karlson char4 = new Karlson("Карлсон", "4");
         System.out.println();
         char1.toCommunicate();
         char2.toCommunicate();
@@ -24,7 +25,9 @@ public class Main {
 
         char1.toSay();
         System.out.println();
+        Box box1 = new Box("Ящик письменного стола");
         char4.takeObject(TypeOfObject.CRAYONS);
+        CornerOfSheet corner = new CornerOfSheet("Угол простыни");
         char4.Draw();
         char4.takeObject(TypeOfObject.SCISSORS);
         char1.toWarn();
