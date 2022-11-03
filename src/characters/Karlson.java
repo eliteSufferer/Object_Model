@@ -24,13 +24,13 @@ public class Karlson extends AbstractCharacter implements HowDoThings, Draw, Cut
     }
 
     @Override
-    public void doThings(QualityOfAction type) {
-        System.out.println(this.getName() + " совершает действие " + type);
+    public void doThings(QualityOfAction type, String quality) {
+        System.out.println(this.getName() + " совершает действие " + quality);
     }
 
     @Override
-    public void takeObject(TypeOfObject type) {
-        System.out.println(this.getName() + " взял предмет " + type);
+    public void takeObject(TypeOfObject type, String name) {
+        System.out.println(this.getName() + " взял " + name);
     }
 
 }

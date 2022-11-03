@@ -18,8 +18,9 @@ public class Malysh extends AbstractCharacter implements HowDoThings, Communicat
     }
 
     @Override
-    public void doThings(QualityOfAction type) {
-        System.out.println(this.getName() + " совершает действие " + type);
+    public void doThings(QualityOfAction type, String quality) {
+
+        System.out.println(this.getName() + " совершает действие " + quality);
     }
 
     @Override

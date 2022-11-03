@@ -11,8 +11,8 @@ public class Crister extends AbstractCharacter implements Communicate, HowDoThin
     }
 
     @Override
-    public void doThings(QualityOfAction type) {
-        System.out.println(this.getName() + " совершает действие " + type);
+    public void doThings(QualityOfAction type, String quality) {
+        System.out.println(this.getName() + " совершает действие " + quality);
     }
 
     @Override

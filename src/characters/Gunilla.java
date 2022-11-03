@@ -3,16 +3,16 @@ package characters;
 import actions.Communicate;
 import quallity.QualityOfAction;
 import quallity.HowDoThings;
-public class Govnilla extends AbstractCharacter implements HowDoThings, Communicate {
+public class Gunilla extends AbstractCharacter implements HowDoThings, Communicate {
 
-    public Govnilla(String name, String id){
+    public Gunilla(String name, String id){
         super(name, id);
         System.out.println("Создан персонаж " + name);
     }
 
     @Override
-    public void doThings(QualityOfAction type) {
-        System.out.println(this.getName() + " совершает действие " + type);
+    public void doThings(QualityOfAction type, String quality) {
+        System.out.println(this.getName() + " совершает действие " + quality);
     }
 
     @Override
